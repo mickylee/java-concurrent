@@ -2,7 +2,7 @@ package com.mickyli.java.concurrent.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
-public class CountDownlaLatchTest1 extends Thread{
+public class CountDownLatchTest1 extends Thread{
 	/** 
      * CountDownLatch 是并发包中提供的一个可用于控制多个线程同时开始某个动作的类，其 
      * 采用的方式为减计数的方式，当计数减至零时位于latch.await()后的代码才会被执行。 
@@ -14,7 +14,7 @@ public class CountDownlaLatchTest1 extends Thread{
         int i = 0;  
         while (i < 10) {  
             i++;  
-            new CountDownlaLatchTest1().start();  
+            new CountDownLatchTest1().start();  
         }  
         try {  
             latch.await();  
