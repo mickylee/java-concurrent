@@ -3,15 +3,23 @@ package com.mickyli.java.concurrent.semaphore;
 import java.util.concurrent.Semaphore;
 
 /**
- * 信号
+ * 信号量
  * 控制线程的数量
  * @author liqian
  *
  */
 public class SemaphoreTest1 {
 	
-	//构造函数，许可,代表同一时间内允许最多几个线程运行acquire()和release()之间的代码
-	private Semaphore semaphore = new Semaphore(1);
+	private Semaphore semaphore;
+	
+	/**
+	 * 构造函数
+	 * 代表同一时间内允许最多几个线程运行acquire()和release()之间的代码
+	 * @param permits 许可,非负整数
+	 */
+	public SemaphoreTest1(int permits){
+		semaphore = new Semaphore(permits);
+	}
 	
 	//同步性，串行执行任务
 	public void synchronism(){
@@ -19,7 +27,7 @@ public class SemaphoreTest1 {
 			semaphore.acquire();
 			
 			System.out.println(Thread.currentThread().getName() + " begin Timer: " + System.currentTimeMillis());
-			Thread.sleep(1000);
+			Thread.sleep(3000);
 			System.out.println(Thread.currentThread().getName() + " end Timer: " + System.currentTimeMillis());
 			
 			semaphore.release();

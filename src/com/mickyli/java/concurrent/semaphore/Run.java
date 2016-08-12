@@ -3,7 +3,9 @@ package com.mickyli.java.concurrent.semaphore;
 public class Run {
 
 	public static void main(String[] args) {
-		SemaphoreTest1 s1 = new SemaphoreTest1();
+		
+		SemaphoreTest1 s1 = new SemaphoreTest1(1);
+		//SemaphoreTest1 s1 = new SemaphoreTest1(2);
 		
 		ThreadA a = new ThreadA(s1);
 		a.setName("A");
