@@ -1,4 +1,4 @@
-package com.mickyli.java.concurrent.semaphore;
+package com.mickyli.java.concurrent.api.semaphore;
 
 import java.util.concurrent.Semaphore;
 

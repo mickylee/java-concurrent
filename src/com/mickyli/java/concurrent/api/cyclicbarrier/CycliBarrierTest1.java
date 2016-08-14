@@ -1,4 +1,4 @@
-package com.mickyli.java.concurrent.cyclicbarrier;
+package com.mickyli.java.concurrent.api.cyclicbarrier;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

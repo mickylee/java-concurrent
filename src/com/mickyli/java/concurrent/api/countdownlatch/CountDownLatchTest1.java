@@ -1,4 +1,4 @@
-package com.mickyli.java.concurrent.countdownlatch;
+package com.mickyli.java.concurrent.api.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 
